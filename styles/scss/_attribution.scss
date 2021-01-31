@@ -1,0 +1,14 @@
+.attribution {
+  height: rem(18);
+  font-size: rem(11);
+  text-align: center;
+  color: $very-light-gray;
+  background: linear-gradient(
+    180deg,
+    rgba($color: $dark-blue, $alpha: 1),
+    rgba($color: $dark-blue, $alpha: 0.8)
+  );
+  a {
+    color: $lime-green;
+  }
+}

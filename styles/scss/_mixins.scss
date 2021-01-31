@@ -1,0 +1,32 @@
+@function rem($size) {
+  @return $size/16 * 1rem;
+}
+
+@mixin fontSize($size) {
+  font-size: rem($size);
+}
+
+$breakpoints-up: (
+  'medium': rem(600),
+  'large': rem(768),
+  'xlarge': rem(992),
+);
+
+$breakpoints-down: (
+  'small': rem(599),
+  'medium': rem(767),
+  'large': rem(991),
+  'xlarge': rem(1199),
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

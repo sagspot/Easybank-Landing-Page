@@ -1,0 +1,75 @@
+.footer {
+  background: $dark-blue;
+  font-size: rem(15);
+  @include breakpoint-up(large) {
+    font-size: rem(16);
+  }
+  &__wrapper {
+    padding: rem(34) 0 rem(40);
+    text-align: center;
+    @include breakpoint-up(medium) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: rem(48) 0;
+    }
+  }
+  &__logo {
+    margin-bottom: rem(28);
+  }
+  &__social {
+    margin-bottom: rem(34);
+    > a {
+      display: inline-block;
+      height: rem(16);
+      &:not(:last-child) {
+        margin-right: rem(16);
+      }
+
+      svg {
+        fill: $white;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        svg {
+          fill: $lime-green;
+        }
+      }
+    }
+    @include breakpoint-up(medium) {
+      margin-bottom: 0;
+    }
+  }
+  &__links {
+    margin-bottom: rem(32);
+    a {
+      color: $white;
+      line-height: rem(34);
+      @include breakpoint-up(medium) {
+        font-size: rem(16);
+      }
+
+      &:hover {
+        color: $lime-green;
+      }
+    }
+    @include breakpoint-up(medium) {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+    }
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: rem(32);
+    }
+  }
+  .btn {
+    margin-bottom: rem(26);
+  }
+  p {
+    font-size: rem(13);
+    margin: unset;
+  }
+}

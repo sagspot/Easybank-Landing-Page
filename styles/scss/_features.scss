@@ -1,0 +1,58 @@
+.feature {
+  background: $light-grayish-blue;
+  text-align: center;
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
+  &__head {
+    margin-bottom: rem(60);
+    @include breakpoint-up(large) {
+      width: 60%;
+    }
+    h2 {
+      @include breakpoint-up(large) {
+        margin-bottom: rem(32);
+      }
+    }
+    p {
+      @include breakpoint-up(large) {
+        max-width: rem(640);
+      }
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__item {
+    padding: rem(15);
+  }
+  &__icon {
+    margin-bottom: rem(28);
+    @include breakpoint-up(large) {
+      margin-bottom: rem(44);
+    }
+  }
+  &__title {
+    font-size: rem(20);
+    line-height: 1.15;
+    margin-bottom: rem(24);
+    color: $dark-blue;
+    @include breakpoint-up(large) {
+      font-size: rem(24);
+    }
+  }
+  &__text {
+    line-height: 1.5;
+    color: $grayish-blue;
+    @include breakpoint-up(large) {
+    }
+  }
+}
